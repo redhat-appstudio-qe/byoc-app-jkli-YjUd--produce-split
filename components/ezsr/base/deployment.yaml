@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: ezsr
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-pepw-tenant/byoc-app-jkli/ezsr@sha256:7c9da7528e1e1357870463e5805f607f31aba1e564e8ddea7105da159abf81cd
         name: my-java-quarkus
         ports:
         - containerPort: 8081
