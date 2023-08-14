@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: ezsr
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: ezsr
+    app.kubernetes.io/part-of: byoc-app-jkli
+  name: ezsr
+spec:
+  rules:
+  - host: ezsr-byoc-pepw-tenant.apps.18102cd06ac71e827df1.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: ezsr
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}

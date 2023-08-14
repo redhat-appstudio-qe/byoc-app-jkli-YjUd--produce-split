@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: ezsr
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-pepw-tenant/byoc-app-jkli/ezsr@sha256:7c9da7528e1e1357870463e5805f607f31aba1e564e8ddea7105da159abf81cd
+        name: my-java-quarkus
+        resources: {}
+status: {}
